@@ -1,0 +1,1868 @@
+/* ↓↓ GENERAL RULES & WEBSITE SETTINGS ↓↓ */
+@font-face {
+    font-family: "Monument Regular";
+    src: url("./Fonts/MonumentExtended-Regular.otf");
+}
+
+@font-face {
+    font-family: "Monument Regular PP";
+    src: url("./Fonts/PPMonumentExtended-Regular.otf");
+}
+
+@font-face {
+    font-family: "Monument Light PP";
+    src: url("./Fonts/PPMonumentExtended-Light.otf");
+}
+
+@font-face {
+    font-family: "PP Monument Extended Black";
+    src: url("./Fonts/PPMonumentExtended-Black.otf");
+}
+
+@font-face {
+    font-family: "Overused-Grotestk-ExtraBold";
+    src: url("./Fonts/OverusedGrotesk-ExtraBold.otf");
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Book";
+    src: url("./Fonts/PPNeueMontreal-Book.otf");
+}
+
+
+
+:root {
+    --primary: #F5771b;
+    --secondary: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+	margin: 0;
+    background-color: rgb(0, 0, 0);
+    background-image: url(./Z-AakifUmarPhotos/ParallaxP3.png);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* ↓↓ ===== [0] MESSAGE HIDDEN ===== ↓↓ */
+.msgcontainer {
+    display: none;
+}
+
+/* ↓↓ ===== [1] PRELOADER ===== ↓↓ */
+header.h1 { 
+    position: relative;
+    font-size: 32vw;
+    line-height: 1.125;
+    color: #161616;
+}
+
+.counter { /* ▼ Animated Counter ▼ */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #000000;
+    z-index: 8;
+    padding: 0.2em 0.4em;
+    font-size: 20vw;
+    font-family: "Monument Regular";
+    pointer-events: none;
+} 
+
+.overlay { /* ▼ Animated Bar Collection ▼ */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    pointer-events: none;    
+} 
+
+.bar { /* ▼ Individual Animated Bar ▼ */
+    width: 100%;
+    height: 100%;
+    background:#ffffff;
+}
+
+
+
+/* ↓↓ ===== [2] ANIMATED NAVBAR ===== ↓↓ */
+header{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+
+}
+
+header.active{
+    top: 0;
+    left: 0;
+    height: 60px; 
+}
+
+header.active .logo,
+header.active ul li a{
+    color: black;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    margin-right:40px ;
+}
+
+header ul li{
+    margin: 0px 14px;
+}
+
+header ul li a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    font-weight: 700;
+    font-family: "Monument Regular PP";
+}
+
+header .logo{
+    font-size: 20px;
+    color: var(--secondary);
+    margin-left: 40px;
+    font-weight: 700;
+    font-family: "Monument Regular PP";
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.li a {
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; 
+    display: inline-block;
+    color: var(--secondary); 
+}
+
+.li a:hover {
+    transform: translateY(-5px);
+    color: rgb(255, 0, 0); 
+}
+
+.li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--secondary); 
+    transition: width 0.3s ease-out;
+}
+
+.li a:hover::after {
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+}
+
+
+/* ↓↓ ===== [3] TYPEWRITER EFFECT ===== ↓↓ */
+h5 {
+    font-size: 50px;
+    font-family: "PP Monument Extended Black";
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    padding: 10% 0px 0px 15%;
+    margin-bottom: 350px;
+  }
+
+  #typewriter {
+    color: #ffffff;
+    font-weight: bolder;
+    font-family: "PP Monument Extended Black";
+
+  }
+
+  #static {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+  }
+
+  #LineAnimate {
+    color: rgb(255, 255, 255);
+    animation: blink 1s linear infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 100%;
+    }
+    50% {
+      opacity: 0%;
+    }
+  }
+
+/* ↓↓ ===== [4] ANIMATED SPLYDEE ===== ↓↓ */
+.splide {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splide .splide__track ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6.4rem;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-family: "Monument Regular", sans-serif;
+}
+
+.splide .splide__track ul li img {
+    width: 6.4rem;
+    height: 4rem;
+}
+
+.splide .splide__track-2 {
+    background-color: #ffffff;
+    rotate: 0deg;
+}
+
+.splide .splide__track-2 ul li {
+    color: black;
+}
+
+/* ↓↓ ===== [5] ANIMATED BURGER MENU ===== ↓↓ */
+
+/* <----BurgerMenu----> */
+.toggler {
+	position: absolute;
+	top: 50px;
+	right: 50px; 
+	width: 60px;
+	height: 60px;
+	z-index: 3;
+	opacity: 0;
+	cursor: pointer;
+  }
+
+.hamburger {
+    position: absolute;
+    top: 50px;
+	right: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #000000;
+}
+
+.hamburger > #lines {
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #ffffff;
+    transition: .4s;
+}
+
+.hamburger>#lines:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color: #ffffff;
+	top: -10px;
+	left: 0;
+	transition: .4s;
+}
+
+.hamburger>#lines:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color: #ffffff;
+	top: 10px;
+	left: 0;
+	transition: .4s;
+}
+
+.toggler:checked + .hamburger > #lines {
+    transform: rotate(135deg);
+}
+
+.toggler:checked:hover + .hamburger > #lines {
+    transform: rotate(225deg);
+}
+
+.toggler:checked + .hamburger > #lines:before, .toggler:checked + .hamburger > #lines:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+
+.nav-container {
+	position: fixed;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 1;
+}
+
+
+.socials {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 40px 100px;
+    font-family: "Monument Regular PP";
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.socials span {
+	text-transform: uppercase;
+	margin: 0 32px;
+	letter-spacing: 0px;
+}
+
+.socials span a {
+	text-decoration: none;
+	color: black;
+	font-weight:bold;
+    transition: 0.4s;
+}
+
+.socials span a:hover {
+	opacity: 0.5;
+}
+
+.menu-wrap {
+    position: fixed;
+    top: 0px; 
+    right: -300px; 
+    z-index: 2;
+    cursor: pointer;
+	transition: right 0.5s ease;
+}
+
+.menu {
+	padding: 10vh 0 25vh;
+	--offset: 20vw;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	
+}
+
+.menu__item {
+	position: relative;
+	padding: 0 6vw;
+    font-family: "Monument Regular";
+    font-weight: bolder;
+
+}
+
+.menu__item-link {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	transition: opacity 0.4s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu__item-link::before {
+	all: initial;
+	counter-increment: menu;
+	position: absolute;
+	bottom: 60%;
+	left: 0;
+	pointer-events: none;
+}
+
+.menu__item-link:hover {
+	transition-duration: 0.1s;
+	opacity: 0;
+}
+
+.menu__item-img {
+	z-index: 2;
+	pointer-events: none;
+	position: absolute;
+	height: 12vh;
+	max-height: 600px;
+	opacity: 0;
+	left: 8%;
+	top: 10%;
+	transform: scale(0);
+}
+
+.menu__item-link:hover + .menu__item-img {
+	opacity: 1;
+	transform: scale(1);
+	transition: all 0.4s;
+}
+
+.marquee {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	color: rgb(214, 214, 214);
+	pointer-events: none;
+}
+
+.marquee__inner {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	opacity: 0;
+	transition: all 0.1s;
+	transform: translateX(60px);
+}
+
+.menu__item-link:hover ~ .marquee .marquee__inner {
+	opacity: 1;
+	transform: translateX(0px);
+	transition-duration: 0.4s;
+}
+
+.menu__item-link,
+.marquee span {
+	white-space: nowrap;
+	font-size: 7vw;
+	padding: 0 1vw;
+	line-height: 1.15;
+}
+
+.marquee span {
+	font-style: italic;
+}
+
+
+/* ↓↓ ===== [6] PAGE CONTENTS ===== ↓↓ */
+.containerwhite {
+    margin: 0%;
+    padding: 0%;
+    background-color: white;
+     border-radius: 0px 0px 30px 30px; 
+	z-index: 0;
+    width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+	
+}
+
+/* ↓↓ ===== [6.1] BLOCKQUOTE TEXT ===== ↓↓ */
+#quote-text {
+    padding: 30px;
+    margin-top: 8%;
+    font-size: 22px;
+    font-family: "Monument Light PP";
+    font-weight: bolder;
+    text-shadow: 1px 1px rgba(33, 33, 32, 0.261)
+}
+
+.highlight-one, .highlight-two {
+    transition: 0.4s ease;
+}
+
+.highlight-one:hover {
+    color: rgb(172, 172, 172);
+    font-size: 20px;
+}
+
+.highlight-two:hover {
+    color: rgb(255, 0, 0);
+    margin-left: 10px;
+    text-decoration: underline 1px;
+    
+}
+
+/* <----BQ Text Animation ----> */
+.sec-4 p {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+section.show-animate .animate {
+    opacity: 1;
+    filter: blur(0);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+section .animate {
+    opacity: 0;
+    transition: 1s;
+    filter: blur(5px);
+}
+
+.sec-4 .showRight-animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transition: 1s;
+    transition-delay: calc(.2s * var(--i));
+    
+}
+
+.sec-4.show-animate .showRight-animate {
+    width: 0;
+}
+
+/* ↓↓ ===== [6.2] PROJECT IMAGE EFFECT ===== ↓↓ */
+.title {
+    color: grey;
+    font-weight: bolder;
+    padding-left: 3%;
+}
+  
+.project-title h1 {
+    font-weight: 300;
+    font-size: 50px;
+}
+  
+.project-categ {
+    font-weight: lighter;
+    color: rgb(190, 190, 190);
+}
+  
+.cursor {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.1);
+    opacity: 0;
+    margin: -100px 0 0 -100px;
+    background: url(image-1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    z-index: 0;
+}
+  
+.wrapper {
+    width: 60%;
+    margin: 180px auto;
+    height: 100%;
+    font-family: "Monument Regular PP";
+    text-transform: uppercase;
+}
+  
+.project {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 1;
+    position: relative;
+    z-index: 0;
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+}
+  
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+  
+.project-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-title {
+    transition: transform 0.3s ease; /* Add smooth transition, refer to JS for transition */
+}
+
+  
+
+/* ↓↓ ===== [6.3] PROJECT BUTTON ===== ↓↓ */
+.button-container {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    min-height: 25vh;
+}
+
+.btn-2 {
+    width: 270px;
+    height: 85px;
+    border: none;
+    color: black;
+    border-radius: 50px;
+    transition: ease-out 0.3s;
+    font-size: 15px;
+    font-weight: bolder;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(21, 21, 21);
+    position: relative;
+    z-index: 0;
+    font-family: "Monument Regular PP";
+    text-transform: uppercase;
+}
+
+.btn-2:hover {
+    color:white;
+    cursor: pointer;
+
+}
+
+.btn-2:before {
+    transition: 0.2s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: rgb(21, 21, 21);
+}
+
+.btn-2:hover:before {
+    transition: 0.4s all ease;
+    border-radius: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+/* ↓↓ ===== [6.4] SERVICES SECTION ===== ↓↓ */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-title {
+    font-size: 65px;
+    font-family:  "PP Monument Extended Black";;
+    color: #000000;
+    font-weight: bolder;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    letter-spacing: -2px;
+    transition: 2s;
+}
+
+.hrservice {
+    width: 79%; /* Make the line span the entire width of the container */
+    background: rgba(98, 98, 98, 0.364);
+    height: 1px;
+    margin-top: 10px; /* Adjust as per your design */
+    margin-bottom: 10px; /* Adjust as per your design */
+}
+
+
+#service-textone:hover {
+    -webkit-text-fill-color: black;
+}
+
+#service-texttwo:hover {
+    -webkit-text-fill-color: black;
+}
+
+
+/* Services Title Animation */
+.sec-3 #animate {
+    transform: scale(.7);
+
+}
+
+.sec-3.show-animate #animate {
+    transform: scale(1);
+}
+
+
+section #animate {
+    opacity: 0;
+    transition: 1s;
+    filter: blur(5px);
+}
+
+section.show-animate #animate {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.hr {
+    width: 100%; /* Make the line span the entire width of the container */
+    background: rgba(98, 98, 98, 0.364);
+    height: 1px;
+    margin-top: 10px; /* Adjust as per your design */
+    margin-bottom: 10px; /* Adjust as per your design */
+}
+
+/* <----Services Cards ----> */
+.wrapper-service {
+	padding: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	
+}
+.box-area {
+	width: 400px;
+	margin: 25px;
+	padding: 40px;
+	background-color: #f5f5f5;
+	transition: all 0.6s ease-in-out;
+	border-style: solid;
+	border-color: #161619;
+	box-shadow: 5px 5px 5px ;
+    font-family: "PP Neue Montreal Book";
+}
+
+.box-area:hover {
+	scale: 1.1;
+}
+.box-area .icon-area {
+	width: 100%;
+	margin-bottom: 40px;
+}
+.icon-area i {
+	font-size: 70px;
+	color: #262626;
+}
+.box-area h6 {
+	margin-bottom: 10px;
+	color: #262626;
+	font-size: 30px;
+    text-transform: uppercase;
+	font-family: "Monument Regular PP";
+}
+
+.box-area p {
+    font-family: "Monument Light PP";
+    font-size: 15px;
+}
+
+.bolded {
+    font-weight: bolder;
+    color: rgb(255, 1, 1);
+}
+
+.box-area:hover {
+	background-color: #161619;
+	box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+	
+}
+.box-area:hover i {
+	color: #fff;
+}
+.box-area:hover h6 {
+	color: #fff;
+}
+.box-area:hover p {
+	color: #fff;
+}
+
+/* ↓↓ ===== [6.5] FAQ SECTION ===== ↓↓ */
+
+/* <----Accordian Info ----> */
+.frequentlyaskedtitle {
+    font-size: 65px;
+    font-family:  "PP Monument Extended Black";
+    color: #000000;
+    font-weight: bolder;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    letter-spacing: -2px;
+    transition: 2s;;
+}
+
+
+.questions-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.question{
+    border-bottom: 1px solid #000000;
+}
+.question button{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border:none;
+    outline: none;
+    font-size: 17px;
+    color: #000000;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: "Monument Regular PP";
+}
+
+.question p{
+    font-size: 15px;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+    font-family: "Monument Light PP";
+    color: #5d5d5d;
+}
+
+.d-arrow{
+    transition: transform 0.5s ease-in ;
+    color: #fff;
+}
+
+/*add this class when click*/
+.question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+
+/* ↓↓ ===== [6.5] CS POLICY SECTION ===== ↓↓ */
+
+/* content and service policy */
+#cspolicy-title {
+    font-size: 14px;
+    font-family: "Monument Regular PP";
+}
+
+.cspolicy {
+    font-family: "Monument Light PP";
+    font-size: 14px;
+    font-weight: lighter;
+    color: rgb(59, 51, 51);
+    transition: 0.5s;
+}
+
+.cspolicy:hover {
+    opacity: 0.5;
+}
+
+.cspolicy a {
+    color: unset;
+    text-decoration: none;
+}
+  
+
+/* ↓↓ ===== [7.1] FOOTER 1 ===== ↓↓ */ 
+.containerfooter {
+    padding-top: 100px;
+    max-width: 100%;
+    margin: 0 auto;
+    /* background: #111; */
+    background-image: linear-gradient(180deg, #000000,#000000); 
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h4{
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}  
+
+.end1 {
+    font-size: 100px;
+    font-family: "PP Monument Extended Black";
+    text-transform: uppercase;
+    line-height: 100px;
+}
+
+.end2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding-top: 10%;
+    font-family: "Monument Regular";
+}
+
+.hrend {
+    width: 50%; /* Make the line span the entire width of the container */
+    background: rgba(98, 98, 98, 0.364);
+    height: 1px;
+    margin-top: 70px; /* Adjust as per your design */
+    margin-bottom: 10px; /* Adjust as per your design */
+}
+
+/* button 1 */
+.buttoncontainers {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    z-index: 0;
+    margin-bottom: 200px;
+}
+
+.button-container3 {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+  
+}
+
+.button-container2 {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    padding-right: 10px;
+    
+}
+
+.btn-3 {
+    width: 320px;
+    height: 85px;
+    border: none;
+    color: white;
+    background-color:transparent;
+    border-radius: 50px;
+    transition: ease-out 0.3s;
+    font-size: 12px;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    font-family: "Monument Regular PP";
+    
+}
+
+.btn-3:hover {
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.btn-3:before {
+    transition: 0.2s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-3:hover:before {
+    transition: 0.4s all ease;
+    border-radius: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: -1;
+
+}
+
+/*button 2 */
+.btn-4 {
+    width: 250px;
+    height: 85px;
+    border: none;
+    color: white;
+    background-color:transparent;
+    border-radius: 50px;
+    transition: ease-out 0.3s;
+    font-size: 13px;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    font-family: "Monument Regular PP";
+    text-transform: uppercase;
+}
+
+.btn-4:hover {
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.btn-4:before {
+    transition: 0.2s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-4:hover:before {
+    transition: 0.4s all ease;
+    border-radius: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+#arrow-redirect {
+    padding-left: 20px;
+    font-size: 50px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    font-family: "PP Monument Extended Black";
+
+}
+
+.footerworktext {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: color .4s ease;
+}
+
+.footerworktext:hover {
+    color: rgb(255, 0, 0);
+}
+
+#yessir {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    transition: 3s;
+}
+
+#yessir:hover {
+    -webkit-text-fill-color: white;
+}
+
+/* ↓↓ ===== [7.2] FOOTER 2 END ===== ↓↓ */ 
+.footer {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+.footerdetails {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+  
+.menu-elem {
+    list-style: none;
+}
+
+.menu-icon {
+    color: white;
+    font-size: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 1;
+    transition: 0.3s;
+    font-family: "Monument Regular PP";
+}
+
+.menu-icon:hover {
+    color: #b4b4b4;
+}
+  
+.menu-icon:hover {
+    opacity: 1;
+}
+  
+.text {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: "Monument Regular PP";
+}
+
+
+
+
+
+/* ↓↓ 1280px LAPTOP SETTINGS ↓↓ */
+
+@media only screen and (max-width: 1500px) {
+    
+/* ↓↓ GENERAL RULES & WEBSITE SETTINGS ↓↓ */
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    background-image: url(./Z-AakifUmarPhotos/ParallaxP6.png);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    width: 100%;
+} 
+    
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+/* ↓↓ ===== [1] ANIMATED BURGER MENU ===== ↓↓ */   
+    
+.socials {
+	margin: 40px 60px;
+    font-size: 15px;
+}
+
+.socials span {
+	text-transform: uppercase;
+	margin: 0 15px;
+	letter-spacing: 0px;
+}
+
+.menu__item-link,
+.marquee span {
+	white-space: nowrap;
+	font-size: 8vw;
+	padding: 0 1vw;
+	line-height: 1.2;
+}
+
+
+/* ↓↓ ===== [2] TYPEWRITER EFFECT ===== ↓↓ */
+h5 {
+    font-size: 30px;
+    font-family: "PP Monument Extended Black";
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    padding: 10% 0px 0px 15%;
+    margin-bottom: 270px;
+}
+
+    #typewriter {
+    color: #ffffff;
+    font-weight: bolder;
+    font-family: "PP Monument Extended Black";
+
+}
+
+    #static {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+}
+
+    #LineAnimate {
+    color: rgb(255, 255, 255);
+    animation: blink 1s linear infinite;
+}
+
+    @keyframes blink {
+    0% {
+        opacity: 100%;
+}
+    50% {
+        opacity: 0%;
+    }
+}
+
+/* ↓↓ ===== [3] PAGE CONTENTS ===== ↓↓ */
+
+/* ↓↓ ===== [3.1] BLOCKQUOTE TEXT ===== ↓↓ */
+#quote-text {
+    padding: 30px;
+    margin-top: 8%;
+    font-size: 18px;
+    font-family: "Monument Light PP";
+    font-weight: bolder;
+    text-shadow: 1px 1px rgba(33, 33, 32, 0.261)
+}
+
+.highlight-one, .highlight-two {
+    transition: 0.4s ease;
+}
+
+.highlight-one:hover {
+    color: rgb(172, 172, 172);
+    font-size:17px;
+}
+
+.highlight-two:hover {
+    color: rgb(255, 0, 0);
+    margin-left: 10px;
+    text-decoration: underline 1px;
+    
+}
+
+/* ↓↓ ===== [3.2] SERVICES SECTION ===== ↓↓ */
+.service-title {
+    font-size: 45px;
+    font-family:  "PP Monument Extended Black";;
+    color: #000000;
+    font-weight: bolder;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    letter-spacing: -2px;
+    transition: 2s;
+}
+
+.hrservice {
+    width: 83%; /* Make the line span the entire width of the container */
+    background: rgba(98, 98, 98, 0.364);
+    height: 1px;
+    margin-top: 10px; /* Adjust as per your design */
+    margin-bottom: 10px; /* Adjust as per your design */
+}
+
+.hr {
+    width: 100%; /* Make the line span the entire width of the container */
+    background: rgba(98, 98, 98, 0.364);
+    height: 1px;
+    margin-top: 10px; /* Adjust as per your design */
+    margin-bottom: 10px; /* Adjust as per your design */
+}
+
+/* <----Services Cards ----> */
+.box-area {
+    width: 700px;
+    margin: 25px;
+    padding: 40px;
+    background-color: #f5f5f5;
+    transition: all 0.6s ease-in-out;
+    border-style: solid;
+    border-color: #161619;
+    box-shadow: 5px 5px 5px ;
+    font-family: "PP Neue Montreal Book";
+}
+
+/* <----Accordian Info ----> */
+.frequentlyaskedtitle {
+    font-size: 45px;
+    font-family:  "PP Monument Extended Black";
+    color: #000000;
+    font-weight: bolder;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    letter-spacing: -2px;
+    transition: 2s;;
+}
+
+
+
+/* ↓↓ ===== [3.3] FOOTER 1 ===== ↓↓ */ 
+.containerfooter {
+    padding-top: 100px;
+    max-width: 100%;
+    margin: 0 auto;
+    /* background: #111; */
+    background-image: linear-gradient(180deg, #000000,#000000); 
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h4{
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}  
+
+.end1 {
+    font-size: 50px;
+    font-family: "PP Monument Extended Black";
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+.end2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding-top: 10%;
+    font-family: "Monument Regular";
+}
+
+.hrend {
+    width: 45%; /* Make the line span the entire width of the container */
+    background: rgba(98, 98, 98, 0.364);
+    height: 1px;
+    margin-top: 40px; /* Adjust as per your design */
+    margin-bottom: 10px; /* Adjust as per your design */
+}
+
+/* button 1 */
+.buttoncontainers {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    z-index: 0;
+    margin-left: 5px;
+    margin-bottom: 60px;
+}
+
+.button-container3 {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    
+}
+
+.button-container2 {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    padding-right: 10px;
+    
+}
+
+.btn-3 {
+    width: 250px;
+    height: 80px;
+    border: none;
+    color: white;
+    background-color:transparent;
+    border-radius: 50px;
+    transition: ease-out 0.3s;
+    font-size: 10px;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    font-family: "Monument Regular PP";
+    
+}
+
+.btn-3:hover {
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.btn-3:before {
+    transition: 0.2s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-3:hover:before {
+    transition: 0.4s all ease;
+    border-radius: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: -1;
+
+}
+
+/*button 2 */
+.btn-4 {
+    width: 180px;
+    height: 80px;
+    border: none;
+    color: white;
+    background-color:transparent;
+    border-radius: 50px;
+    transition: ease-out 0.3s;
+    font-size: 10px;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    font-family: "Monument Regular PP";
+    text-transform: uppercase;
+}
+
+.btn-4:hover {
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.btn-4:before {
+    transition: 0.2s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-4:hover:before {
+    transition: 0.4s all ease;
+    border-radius: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+#arrow-redirect {
+    padding-left: 20px;
+    font-size: 45px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    font-family: "PP Monument Extended Black";
+}
+
+.footerworktext {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: color .4s ease;
+}
+
+.footerworktext:hover {
+    color: rgb(255, 0, 0);
+}
+
+#yessir {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    transition: 3s;
+}
+
+#yessir:hover {
+    -webkit-text-fill-color: white;
+}
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    background-image: url(./Z-AakifUmarPhotos/ParallaxP7.png);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ↓↓ ===== [1] ANIMATED BURGER MENU ===== ↓↓ */   
+    
+.socials {
+	margin: 40px 60px;
+    font-size: 15px;
+}
+
+.socials span {
+	text-transform: uppercase;
+	margin: 0 15px;
+	letter-spacing: 0px;
+}
+
+.menu__item-link,
+.marquee span {
+	white-space: nowrap;
+	font-size: 8vw;
+	padding: 0 1vw;
+	line-height: 1.3;
+}
+    
+    
+/* ↓↓ ===== [1] ANIMATED NAVBAR ===== ↓↓ */
+header{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+}
+
+header.active{
+    top: 0;
+    left: 0;
+    height: 60px; 
+}
+
+header.active .logo,
+header.active ul li a{
+    color: black;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    margin-right:40px ;
+}
+
+header ul li{
+    margin: 0px 14px;
+}
+
+header ul li a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    font-weight: 700;
+    font-family: "Monument Regular PP";
+}
+
+header .logo{
+    font-size: 20px;
+    color: var(--secondary);
+    margin-left: 40px;
+    font-weight: 700;
+    font-family: "Monument Regular PP";
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.li a {
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; 
+    display: inline-block;
+    color: var(--secondary); 
+}
+
+.li a:hover {
+    transform: translateY(0px);
+    color: rgb(255, 0, 0); 
+}
+
+.li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--secondary); 
+    transition: width 0.3s ease-out;
+}
+
+.li a:hover::after {
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+}
+
+/* ↓↓ ===== [2] TYPEWRITER EFFECT ===== ↓↓ */
+h5 {
+    font-size: 25px;
+    font-family: "PP Monument Extended Black";
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    padding: 16% 0px 0px 15%;
+    margin-bottom: 270px;
+}
+
+    #typewriter {
+    color: #ffffff;
+    font-weight: bolder;
+    font-family: "PP Monument Extended Black";
+
+}
+
+    #static {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+}
+
+    #LineAnimate {
+    color: rgb(255, 255, 255);
+    animation: blink 1s linear infinite;
+}
+
+    @keyframes blink {
+    0% {
+        opacity: 100%;
+}
+    50% {
+        opacity: 0%;
+    }
+}
+
+/* ↓↓ ===== [3] ANIMATED SPLYDEE ===== ↓↓ */
+.splide {
+    pointer-events: none;
+}
+
+.splide .splide__track ul li {
+     font-size: 5.4rem;
+}
+
+.splide .splide__track ul li img {
+    width: 6.4rem;
+    height: 4rem;
+}
+
+.splide .splide__track-2 {
+    background-color: #ffffff;
+    rotate: 0deg;
+}
+
+.splide .splide__track-2 ul li {
+    color: black;
+}
+
+/* ↓↓ ===== [4] PAGE CONTENTS ===== ↓↓ */
+
+.project-title h1 {
+    font-weight: 300;
+    font-size: 40px;
+}
+
+
+/* ↓↓ ===== [6.4] SERVICES SECTION ===== ↓↓ */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-title {
+    font-size: 45px;
+    font-family:  "PP Monument Extended Black";;
+    color: #000000;
+    font-weight: bolder;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    letter-spacing: -2px;
+    transition: 2s;
+}
+
+.hrservice {
+    width: 79%; /* Make the line span the entire width of the container */
+    background: rgba(98, 98, 98, 0.364);
+    height: 1px;
+    margin-top: 10px; /* Adjust as per your design */
+    margin-bottom: 10px; /* Adjust as per your design */
+}
+
+
+#service-textone:hover {
+    -webkit-text-fill-color: inherit;
+}
+
+#service-texttwo:hover {
+    -webkit-text-fill-color: inherit;
+}
+
+/* <----Services Cards ----> */
+/* <----Services Cards ----> */
+.wrapper-service {
+	padding: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	
+}
+.box-area {
+	width: 700px;
+	margin: 25px;
+	padding: 40px;
+	background-color: #f5f5f5;
+	transition: all 0.6s ease-in-out;
+	border-style: solid;
+	border-color: #161619;
+	box-shadow: 5px 5px 5px ;
+    font-family: "PP Neue Montreal Book";
+}
+
+.box-area:hover {
+	scale: 1;
+}
+.box-area .icon-area {
+	width: 100%;
+	margin-bottom: 40px;
+}
+.icon-area i {
+	font-size: 70px;
+	color: #262626;
+}
+.box-area h6 {
+	margin-bottom: 10px;
+	color: #262626;
+	font-size: 30px;
+    text-transform: uppercase;
+	font-family: "Monument Regular PP";
+}
+
+.box-area p {
+    font-family: "Monument Light PP";
+    font-size: 15px;
+}
+
+.bolded {
+    font-weight: bolder;
+    color: rgb(255, 1, 1);
+}
+
+.box-area:hover {
+	background-color: unset;
+	box-shadow: 5px 5px 5px;
+	
+}
+.box-area:hover i {
+	color: #000000;
+}
+.box-area:hover h6 {
+	color: #000000;
+}
+.box-area:hover p {
+	color: #000000;
+}
+
+/* ↓↓ ===== [6.5] FAQ SECTION ===== ↓↓ */
+
+/* <----Accordian Info ----> */
+.frequentlyaskedtitle {
+    font-size: 45px;
+    font-family:  "PP Monument Extended Black";
+    color: #000000;
+    font-weight: bolder;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    letter-spacing: -2px;
+    transition: 2s;;
+}
+
+
+.questions-container{
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* ↓↓ ===== [7.1] FOOTER 1 ===== ↓↓ */ 
+
+.footerworktext {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: color .4s ease;
+}
+
+.footerworktext:hover {
+    color: unset;
+}
+
+#yessir {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    transition: 3s;
+}
+
+#yessir:hover {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+
+}
+
+/* ↓↓ 1000px SETTINGS (NO DISPLAY) ↓↓ */
+@media only screen and (max-width: 1000px) {
+    
+    /*problem here */
+    * {
+        display: none;
+    }
+
+    /* ↓↓ ===== [0] MESSAGE UNHIDDEN ===== ↓↓ */
+    
+}

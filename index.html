@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./Y-OtherImages/Auvance.ico"><!--Icon For Website-->
+    <title>@Auvance ◆ Freelance Developer, Designer & Editor</title>
+
+    <!--↓ FONTS ↓-->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet"> <!--Monrope Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet"> <!-- Anton Font-->
+
+    <!--↓ GSAP PLUGINS ↓-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script> <!-- GSAP Preloader Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script> <!--GSAP for Navbar-->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>  <!--GSAP for SPLYDE (Sticker Animation)--> 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"/>
+
+    <!--↓ EXTERNAL FILES ↓-->
+    <link rel="stylesheet" href="index.css"> <!--External CSS File-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+
+
+    <!--LENIS SCROLL FOR WEBSITE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+
+    <script
+      id="chtbt"
+      src="https://diverse-yeti-accurate.ngrok-free.app/embed.js"
+      data-aid="asst_de8fGlul3pL7IA8smfSgYcs8"
+    ></script>
+</head>
+    <body>
+        
+        <!--MESSAGE FOR SCREENS UNDER 1000 -->
+        <div class="msgcontainer">
+            <div class="msg">This Website is Not Available on Mobile Apps.</div>
+            <div class="msg2">Please Use A Laptop or PC to view.</div>
+        </div>
+
+        <!-- ↓ ANIMATED COUNTER ↓ -->
+        <h1 class="counter">0</h1>
+
+
+        <!-- ↓ ANIMATED BAR TRANSITION WELCOMING USER ↓ -->
+            <div class="overlay">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+        <!-- ↓ BURGER MENU ↓ -->
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+                <div id="lines"></div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="socials">
+                <span><a href="https://linksta.cc/@auvance" target="_blank">LinkStack</a></span>
+                <span><a href="#">Privacy Policy</a></span>
+                <span><a href="#">Terms & Conditions</a></span>
+            </div>
+            <nav class="menu">
+                <div class="menu__item">
+                    <a class="menu__item-link" href="index.html">Home</a>
+                    <img class="menu__item-img" src="Y-OtherImages/AuvanceR1.png" />
+                    <div class="marquee">
+                        <div class="marquee__inner">
+                            <span>Home - Home - Home - Home - Home - Home - Home</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__item"> 
+                    <a class="menu__item-link" href="2-aboutpage.html">About</a>
+                    <img class="menu__item-img" src="Y-OtherImages/AuvanceR3.png" />
+                    <div class="marquee">
+                        <div class="marquee__inner">
+                            <span>About - About - About - About - About - About - About</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__item">
+                    <a class="menu__item-link"  href="3-contactpage.html">Contact</a>
+                    <img class="menu__item-img" src="Y-OtherImages/AuvanceR4.png" />
+                    <div class="marquee">
+                        <div class="marquee__inner">
+                            <span
+                                >Contact - Contact - Contact - Contact - Contact - Contact -
+                                Contact</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- ↓ NAVIGATION BAR ↓ -->
+        <header id="navbar" style="display: none;">
+            <div class="logo">@AUVANCE</div>
+            <ul>
+                <!-- <li class="li"><a href="#">Work</a></li> -->
+                <li class="li"><a href="2-aboutpage.html">ABOUT</a></li>
+                <li class="li"><a href="3-contactpage.html">CONTACT</a></li>
+            </ul>
+        </header>
+
+        <h5>
+            <span id="static">Auvance,  ↘<br /></span> <span id="typewriter"></span
+            ><span id="LineAnimate">|</span>
+        </h5>
+
+    
+        <!--SPLYDE (STICKER ANIMATION)-->
+        <div class="splide">
+            <div class="splide__track splide__track-2 ">
+              <ul class="splide__list">
+                <li class="splide__slide">AUVANCE</li>
+                <li class="splide__slide"><img src="./SVGs/arrow2.svg" alt=""></li>
+                <li class="splide__slide">AUVANCE</li>
+                <li class="splide__slide"><img src="./SVGs/arrow2.svg" alt=""></li>
+                <li class="splide__slide">AUVANCE</li>
+                <li class="splide__slide"><img src="./SVGs/arrow2.svg" alt=""></li>
+              </ul>
+            </div>
+        </div>
+    
+
+    <!-- CONTENT PART OF WHITE STARTS HERE -->
+    <div class="containerwhite">
+
+        <div class="containerfortext">
+            <blockquote id="quote-text">
+                <section class="sec-4">
+                    <p class="animate">"Architecting digital landscapes that redefine excellence whilst<span class="showRight-animate"></span><p>
+                    <p class="animate"><span class="highlight-one">recalibrating</span> & <span class="highlight-one">recreating</span> within the ever paradigm<span class="showRight-animate"></span></p>
+                    <p class="animate">shift of technology." - <span class="highlight-two">Auvance</span><span class="showRight-animate" style="--i:3;"></span></p>
+                </section>
+            </blockquote> 
+         </div> 
+            
+         <br><br><br><br><br>
+         <br><br><br><br>
+                
+        <div class="cursor"></div>
+            <div class="wrapper">
+
+                <section class="sec-3">
+                    <h1 class="service-title" id="animate"><span id="service-textone">RECENT </span><span id="service-texttwo">PROJECTS:</span></h1>
+                    <div class="hrservice" id="animate"></div>
+                </section>
+
+                <br><br><br><br><br>
+            
+            <!-- [1] RECENT WORK -->
+            <div class="title">recent work</div>
+            <br>
+            <div class="project-list">
+                <a href="https://tendycutz.com" target="_blank"><div class="project p-1">
+                    <div class="project-title"><h1>TendyCutz</h1></div>
+                    <div class="project-categ">Frontend</div>
+                    <div class="project-overlay"></div>
+                </div>
+                </a>
+
+                <!-- <a href="https://dennissnellenberg.com/" target="_blank"><div class="project p-2">
+                    <div class="project-title"><h1>Ionuvic</h1></div>
+                    <div class="project-categ">Video Editing</div>
+                    <div class="project-overlay"></div>
+                </div>
+                </a>
+
+                <a href="https://dennissnellenberg.com/" target="_blank"><div class="project p-3">
+                    <div class="project-title"><h1>Jerium</h1></div>
+                    <div class="project-categ">Graphic Designing</div>
+                    <div class="project-overlay"></div>
+                </div>
+                </a>
+
+                <a href="https://dennissnellenberg.com/" target="_blank"><div class="project p-4">
+                    <div class="project-title"><h1>Okohlama</h1></div>
+                    <div class="project-categ">Branding</div>
+                    <div class="project-overlay"></div>
+                </div>
+                </a>
+
+                <a href="https://dennissnellenberg.com/" target="_blank"><div class="project p-4">
+                    <div class="project-title"><h1>LogoMark</h1></div>
+                    <div class="project-categ">Branding</div>
+                    <div class="project-overlay"></div>
+                </div>
+                </a>
+
+                <a href="https://dennissnellenberg.com/" target="_blank"><div class="project p-1">
+                    <div class="project-title"><h1>LogoMark</h1></div>
+                    <div class="project-categ">Branding</div>
+                    <div class="project-overlay"></div>
+                </div>
+                </a> -->
+            </div>
+            <div class="button-container">
+                <a href="https://drive.google.com/drive/folders/1ZA5hn_y3QqTPmk_lv6pR8hUarN-E02Fg?usp=sharing" target="_blank"><button class="btn-2">More Work<br><span class="partbtn-2">→ (Archive) ←</span></button></a>
+            </div>
+         </div>
+
+
+        <br><br><br><!--LINE BREAK [SPACERS]-->
+        <br><br><br><!--LINE BREAK [SPACERS]-->
+
+
+         <div class="services">
+            <section class="sec-3">
+                <h1 class="service-title" id="animate"><span id="service-textone">MY </span><span id="service-texttwo">SPECIALITY:</span></h1>
+                <div class="hr" id="animate"></div>
+            </section>
+            
+         </div>
+
+         <!-- [2] SERVICES SECTION -->
+         <div class="wrapper-service">
+                <div class="box-area">
+                <div class="icon-area">
+                    <i class="lni lni-island"></i>
+                </div>
+                <h6>Frontend</h6>
+                <p>
+                    Having developed the front ends of numerous websites, my area of 
+                    expertise is creating captivating user interfaces with <span class="bolded">HTML, CSS3, 
+                    and JAVASCRIPT</span> along with sweet animation plugins that give 
+                    the website taste.
+                </p>
+                </div>
+                <div class="box-area custom">
+                <div class="icon-area">
+                    <i class="lni lni-mashroom"></i>
+                </div>
+                <h6>Video Editor</h6>
+                <p>
+                    Having edited multiple pieces of media over 7 years, my produce 
+                    results in masterpieces that engage audiences with the help of <span class="bolded">
+                    Premiere Pro 2023</span> along with Elite Assets that spice up the
+                    visuals of content. 
+                </p>
+                </div>
+                <div class="box-area">
+                <div class="icon-area">
+                    <i class="lni lni-trees"></i>
+                </div>
+                <h6>Designer</h6>
+                <p>
+                    Having crafted numerous graphics since 2016, my designs result in remarkable 
+                    thumbnails & brochures that captivates your audience, utilizing 
+                    <span class="bolded">Photoshop 2021</span> to enhance the visual appeal 
+                    of your brand.
+                </p>
+                </div>
+          </div>   
+
+
+          <br><br><br><br><br><br>
+          <br><br><br><br><br><br>
+          <br><br><br><br><br><br>
+        
+        <section class="frequentlyasked">
+
+            <section class="sec-3">
+                <h1 class="frequentlyaskedtitle" class="service-title" id="animate"><span id="service-textone">FREQUENTLY </span><span id="service-textone">ASKED:</span></h1>
+                <div class="hr" id="animate"></div>
+            </section>
+
+            <!-- [3] FAQ SECTION -->
+            <div class="questions-container">
+                <div class="question">
+                    <button>
+                        <span class="question-title">What Languages, Libraries or Frameworks Do You Use?</span>
+                        <i class="fas fa-chevron-down d-arrow"></i>
+                    </button>
+                    <p> Influential in the trusty trio HTML, CSS & JAVASCRIPT. Javascript Libraries;
+                        GSAP Animations & Lenis Scroll (More Added Soon!). No Frameworks (may subject to change). 
+                        For the backened, we use Formspree API, as it's easier for handling forms & requests.
+                    </p>
+                </div>
+
+                <div class="question">
+                    <button>
+                        <span>What File Formats Will I Receive For My Final Designs?</span>
+                        <i class="fas fa-chevron-down d-arrow"></i>
+                    </button>
+                    <p> We provide final designs in various formats, such as PNG, JPEG, PDF, 
+                        and editable source files (AI, PSD) based on your needs.
+                    </p>
+                </div>
+        
+                <div class="question">
+                    <button>
+                        <span>How Long Does A Project Usually Take?</span>
+                        <i class="fas fa-chevron-down d-arrow"></i>
+                    </button>
+                    <p>Depends On The Project Type & Complextion; We provide a Free Discord/Zoom call to 
+                       determine whether we're suitable to collaborate straight away.
+                    </p>
+                </div>
+
+                <div class="question">
+                    <button>
+                        <span>How Are Your Services Priced?</span>
+                        <i class="fas fa-chevron-down d-arrow"></i>
+                    </button>
+                    <p>Pricing depends on complexity of projects, simple projects are generally lower in pricing,
+                       likewise, advance projects are higher in price, thus varies from project to project. Pricing
+                       is discussed in our Free Discord/Zoom call, after the analysis of your project.
+                    </p>
+                </div>
+        
+                <div class="question">
+                    <button>
+                        <span>Are You Looking For Partnerships?</span>
+                        <i class="fas fa-chevron-down d-arrow"></i>
+                    </button>
+                    <p>Absolutely! Companies & Creators are open and welcome to discuss. If you're a company
+                       or creator, either message me through Discord or Email, Whichever suits you the best.
+                    </p>
+                </div>
+
+            </div>
+
+            <br><br><br><br>
+            <h6 id="cspolicy-title">READ THROUGH</h6>
+            <a href="./X-DocumentsPolicy/Auvance - Content & Service Policy.pdf" class="cspolicy" target="_blank">Content and Service Policy</a>
+
+            <!--temp-->
+            <br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br>
+            <!--temp-->
+
+        </section>
+
+    </div>
+
+        <!-- [4] FOOTER 1 -->
+        <div class="containerfooter">
+
+            <div class="footer-content">            
+                    <p class="end2">GOT A PROJECT IDEA?</p>
+                    <p class="end1">LET'S <a href="3-contactpage.html" class="footerworktext"><span id="yessir">WORK</span></a> <br>TOGETHER.</p>
+                    <div class="hrend" id="animate"></div>
+
+                        <br><br><br><!--[STYLE] LINE BREAKS-->
+
+                    <!--2 Buttons & Arrow-->
+                    <div class="buttoncontainers">
+                        <div class="button-container2">
+                            <a href="mailto:therealauvance@gmail.com">
+                                <button class="btn-3">therealauvance@gmail.com</button>
+                            </a>
+                        
+                        <div class="button-container3">
+                            <a href="https://discord.com/" target="_blank"><button class="btn-4">Discord: auvance</button></a>
+                        </div>
+
+                        <div class="arrow">
+                            <p id="arrow-redirect">↗</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+         <!-- [5] FOOTER 2 -->
+        <footer class="footer">
+            <ul class="footerdetails">
+              <li class="menu-elem">
+                <a href="#" class="menu-icon"> Privacy Policy </a>
+              </li>
+              <li class="menu-elem">
+                <a href="#" class="menu-icon"> Terms & Conditions </a>
+              </li>
+              <li class="menu-elem">
+                <a href="./X-DocumentsPolicy/Auvance - Content & Service Policy.pdf" class="menu-icon" target="_blank"> CS Policy </a>
+              </li>
+            </ul>
+        </footer>
+
+        <script src="index.js"></script>
+
+        
+    </body>
+</html>

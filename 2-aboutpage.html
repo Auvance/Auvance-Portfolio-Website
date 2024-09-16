@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./Y-OtherImages/Auvance.ico"><!--Icon For Website-->
+    <title>@Auvance ◆ About</title>
+
+    <!--↓ FONTS ↓-->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet"> <!--Monrope Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet"> <!-- Anton Font-->
+
+    <!--↓ EXTERNAL FILES ↓-->
+    <link rel="stylesheet" href="2-aboutpage.css"> <!--External CSS File-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>  <!--GSAP for SPLYDE (Sticker Animation)--> 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"/>
+
+    <!--LENIS SCROLL FOR WEBSITE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--not sure what this is-->
+</head>
+
+   
+    <body onload="move()">
+
+        <!--MESSAGE FOR SCREENS UNDER 1000 -->
+        <div class="msgcontainer">
+            <div class="msg">This Website is Not Available on Mobile Apps.</div>
+            <div class="msg2">Please Use A Laptop or PC to view.</div>
+        </div>
+        
+
+        <!--PRELOADER-->
+        <div id="preloader">
+            <div id="percent">1%</div>
+            <div id="bar">
+                <div id="barconfrm"></div>
+            </div>
+        </div>
+
+        <!-- ↓ BURGER MENU ↓ -->
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+                <div id="lines"></div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="socials">
+                <span><a href="https://linksta.cc/@auvance" target="_blank">LinkStack</a></span>
+                <span><a href="#">Privacy Policy</a></span>
+                <span><a href="#">Terms & Conditions</a></span>
+            </div>
+            <nav class="menu">
+                <div class="menu__item">
+                    <a class="menu__item-link" href="index.html">Home</a>
+                    <img class="menu__item-img" src="Y-OtherImages/AuvanceR1.png" />
+                    <div class="marquee">
+                        <div class="marquee__inner">
+                            <span>Home - Home - Home - Home - Home - Home - Home</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__item"> 
+                    <a class="menu__item-link" href="2-aboutpage.html">About</a>
+                    <img class="menu__item-img" src="Y-OtherImages/AuvanceR3.png" />
+                    <div class="marquee">
+                        <div class="marquee__inner">
+                            <span>About - About - About - About - About - About - About</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__item">
+                    <a class="menu__item-link"  href="3-contactpage.html">Contact</a>
+                    <img class="menu__item-img" src="Y-OtherImages/AuvanceR4.png" />
+                    <div class="marquee">
+                        <div class="marquee__inner">
+                            <span
+                                >Contact - Contact - Contact - Contact - Contact - Contact -
+                                Contact</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        
+
+        <!-- ↓ NAVIGATION BAR ↓ -->
+        <header id="navbar" style="display: none;">
+            <div class="logo">@AUVANCE</div>
+            <ul>
+                <!-- <li class="li"><a href="#">Work</a></li> -->
+                <li class="li"><a href="index.html">HOME</a></li>
+                <li class="li"><a href="3-contactpage.html">CONTACT</a></li>
+            </ul>
+        </header>
+       
+        <h5>
+            <span id="typewriter"></span
+            ><span id="LineAnimate">|</span> <br>
+            <span id="static"> ↙ Auvance<br /></span> 
+        </h5>
+
+        <!--SPLYDE (STICKER ANIMATION)-->
+        <div class="splide">
+            <div class="splide__track splide__track-2 ">
+              <ul class="splide__list">
+                <li class="splide__slide">ABOUT ME</li>
+                <li class="splide__slide"><img src="./SVGs/arrow3.svg" alt=""></li>
+                <li class="splide__slide">ABOUT ME</li>
+                <li class="splide__slide"><img src="./SVGs/arrow3.svg" alt=""></li>
+                <li class="splide__slide">ABOUT ME</li>
+                <li class="splide__slide"><img src="./SVGs/arrow3.svg" alt=""></li>
+              </ul>
+            </div>
+        </div>
+        
+        <div class="containerblack">
+            <div id="About-Me">
+                <div class="container-imagetext">
+                    <div class="textimage-container">
+                        <div class="image-column-1">
+                            <img src="Z-AakifUmarPhotos/PortraitAuvance.png">
+                        </div>
+                    
+                        <div class="text-column-2">
+                            <section> 
+
+                                <section class="sec-3">
+                                    <h1 class="service-title" id="animate"><span id="service-textone">PERSONAL </span><span id="service-texttwo">SYNOPSIS:</span></h1>
+                                    <div class="hrservice" id="animate"></div>
+                                </section>
+
+                                <p id="subtext">
+                                    A young student <span class="bolded">captivated</span> by the <br> digital space, <span class="bolded">blending aesthetics</span>  
+                                    with functionality, diving deep <br> into the craft & continuing <br> to 
+                                    refine skills to achieve <br><span class="bolded">absolute perfection.</span> <br>
+                                    <span class="arrow">↙</span>
+                                </p>
+                                
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>  
+
+
+           <br><br><br><br><br><br>
+          <br><br><br><br><br><br>
+          <br><br><br><br><br><br>
+
+
+            <!-- [1] HISTORIC JOURNEY  -->
+            <div class="servicesjourney">
+                <section class="sec-3">
+                    <h1 class="web-journey" id="animate"><span id="service-textone">HISTORIC </span><span id="service-texttwo">JOURNEY:</span></h1>
+                    <div class="web-journeyhr" id="animate"></div>
+                </section>
+            </div>
+
+            <div class="containerlist">
+                <div class="item">
+                    <h2>○ Web Development ○</h2>
+                    <div class="web-journeyhr" id="animate"></div>
+                    <p>● 2023 - PRESENT ●<br><br> The path to web development sparked from a 
+                        desire to learn a high income skill. <br>
+                    </p>
+                    <br>
+                    <p>
+                        Researching within the<span class="item-bolded-text"> 'Deep Web Space'</span>, ignited my inner-creative 
+                        soul to master the arts of creating <span class="item-bolded-text">slick websites</span> <br>
+                        with hidden <span class="item-bolded-text">advance functionality</span> <br> 
+                        thus, a passion grew strong.
+                    </p>
+                    <br>
+                </div>
+                <div class="item">
+                    <h2>○ Video Editing ○</h2>
+                    <div class="web-journeyhr" id="animate"></div>
+                    <p>● 2018 - PRESENT ●<br><br> <span class="item-bolded-text">Low budget & creating</span>
+                        content <br> using <span class="item-bolded-text">videopad,</span> a course of 2 years <br> 
+                        whilst gradually being proficient </span> in the <span class="item-bolded-text">editing realm.</span>
+                    </p>
+                    <br> 
+                    <p>2020, <span class="item-bolded-text">Premiere Pro</span> replacing videopad, enabling<span class="item-bolded-text"> competence & simplicity</span> <br>
+                       whilst continuing to sharpening <br><span class="item-bolded-text">my speciality. </span>
+                    </p>
+                    <br>
+                </div>
+                <div class="item">
+                    <h2>○ Graphic Designing ○</h2>
+                    <div class="web-journeyhr" id="animate"></div>
+                    <p>● 2016 - PRESENT ●<br><br> With a passion of <span class="item-bolded-text">traditional art,</span><br> 
+                       grew towards the digital world of <br> design creating <span class="item-bolded-text">logos & thumbnails</span> <br>
+                       using the infamous <span class="item-bolded-text">pixlr editor.</span>
+                    </p>
+                    <br> 
+                    <p>Replaced by <span class="item-bolded-text">Photoshop</span> in 2021, <br> creating <span class="item-bolded-text">digital works</span> simultaneously <br>
+                       mastering the arts of the software.
+                    </p>
+                </div>
+            </div>
+
+            <!--temp-->
+            <br><br><br><br><br><br>
+            <br><br><br><br><br><br>
+            <br><br><br><br><br><br>
+            <!--temp-->
+
+            <!-- [2] SERVICES & OFFERS  -->
+            <div class="servicesjourney">
+                <section class="sec-3">
+                    <h1 class="web-journey" id="animate"><span id="service-textone">WHAT</span><span id="service-texttwo"> I OFFER:</span></h1>
+                    <div class="web-journeyhr" id="animate"></div>
+                </section>
+            </div>
+
+            <div class="containeroffer">
+                <div class="sectionoffer">
+                    <div class="icon">01</div>
+                    <div class="line"></div>
+                    <h2>Frontend Website</h2>
+                    <p>With the use of <span class="section-bolded-text">aesthetics & animations,</span> 
+                       I can assist you in developing a <span class="section-bolded-text">visually  
+                       appealing website</span> that will engage <br> 
+                       visitors, resulting growth.
+                    </p>
+                </div>
+                <div class="sectionoffer">
+                    <div class="icon">02</div>
+                    <div class="line"></div>
+                    <h2>Video Editing</h2>
+                    <p>I manage every facet of video editing, from <span class="section-bolded-text">producing 
+                        engaging</span> social media content to refining promotional 
+                        videos & <span class="section-bolded-text">improving</span> YouTube videos.
+                    </p>
+                </div>
+                <div class="sectionoffer">
+                    <div class="icon">03</div>
+                    <div class="line"></div>
+                    <h2>Graphic Design</h2>
+                    <p>I specialize in generating <span class="section-bolded-text">slick</span> thumbnails, <span class="section-bolded-text">compelling</span> 
+                        banners, marketing ads, & <span class="section-bolded-text">distinctive logos,</span> making your vision
+                        tangible with creativity.
+                    </p>
+                </div>
+            </div>
+
+             <!--temp-->
+             <br><br>
+             <br><br><br>
+             <!--temp-->
+            
+
+        
+        </div>
+
+        <!-- [3] FOOTER 1 -->
+        <div class="containerfooter">
+                    
+            <div class="footer-content">            
+                    <p class="end2">HAVE AN INNOVATIVE CONCEPT?</p>
+                    <p class="end1">LET'S <a href="3-contactpage.html" class="footerworktext"><span id="yessir">WORK</span></a> <br>TOGETHER.</p>
+                    <div class="hrend" id="animate"></div>
+
+                        <br><br><br><!--[STYLE] LINE BREAKS-->
+
+                    <!--2 Buttons & Arrow-->
+                    <div class="buttoncontainers">
+                        <a href="mailto:therealauvance@gmail.com">
+                            <button class="btn-3">therealauvance@gmail.com</button>
+                        </a>
+                        
+                        <div class="button-container3">
+                            <a href="https://discord.com/" target="_blank"><button class="btn-4">Discord: auvance</button></a>
+                        </div>
+
+                        <div class="arrow">
+                            <p id="arrow-redirect">↗</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <!-- [4] FOOTER 2 -->
+        <footer class="footer">
+            <ul class="footerdetails">
+              <li class="menu-elem">
+                <a href="#" class="menu-icon"> Privacy Policy </a>
+              </li>
+              <li class="menu-elem">
+                <a href="#" class="menu-icon"> Terms & Conditions </a>
+              </li>
+              <li class="menu-elem">
+                <a href="./X-DocumentsPolicy/Auvance - Content & Service Policy.pdf" class="menu-icon" target="_blank"> CS Policy </a>
+              </li>
+            </ul>
+        </footer>
+
+    <script src="2-aboutpage.js"></script>
+
+
+
+
+
+
+        
+    </body>
+</html>

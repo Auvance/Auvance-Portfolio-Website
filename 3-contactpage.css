@@ -1,0 +1,513 @@
+/* ↓↓ GENERAL RULES & WEBSITE SETTINGS ↓↓ */
+
+@font-face {
+    font-family: "Monument Regular";
+    src: url("./Fonts/MonumentExtended-Regular.otf");
+}
+
+@font-face {
+    font-family: "Monument Regular PP";
+    src: url("./Fonts/PPMonumentExtended-Regular.otf");
+}
+
+@font-face {
+    font-family: "Monument Light PP";
+    src: url("./Fonts/PPMonumentExtended-Light.otf");
+}
+
+@font-face {
+    font-family: "Overused-Grotestk-ExtraBold";
+    src: url("./Fonts/OverusedGrotesk-ExtraBold.otf");
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Book";
+    src: url("./Fonts/PPNeueMontreal-Book.otf");
+}
+
+@font-face {
+    font-family: "PP Monument Extended Black";
+    src: url("./Fonts/PPMonumentExtended-Black.otf");
+}
+
+
+:root {
+    --primary: #F5771b;
+    --secondary: #ffffff;
+	--tertiary: #000;
+    --bg-color: #081b29;
+    --second-bg-color: #ededed;
+    --main-color: #00abf0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+	margin: 0;
+    background-color: rgb(0, 0, 0); 
+	background-image: url(./Y-OtherImages/bannerforwebsite.png);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* ↓↓ ===== [0] MESSAGE HIDDEN ===== ↓↓ */
+.msgcontainer {
+    display: none;
+}
+
+/* ↓↓ ===== [1] PRELOADER ===== ↓↓ */
+#preloader {
+    position: fixed; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%; 
+    z-index: 2;
+    background-color: #ffffff;
+    flex-direction: column;
+}
+#percent{ /* ▼ Animated Percent ▼ */
+    color: rgb(0, 0, 0);
+    font-family: "Monument Regular";
+    font-size: 150px;
+}
+#bar{ /* ▼ Animated Bar ▼ */
+    width: 60%;
+    margin-top: 20px;
+}
+#barconfrm{
+    width: 1%;
+    padding: 1px 0px;
+    background-color: rgb(0, 0, 0);
+}
+
+/* ↓↓ ===== [2] ANIMATED NAVBAR ===== ↓↓ */
+header{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+}
+
+header.active{
+    top: 0;
+    left: 0;
+    height: 60px; 
+}
+
+header.active .logo,
+header.active ul li a{
+    color: black;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    margin-right:40px ;
+}
+
+header ul li{
+    margin: 0px 14px;
+}
+
+header ul li a{
+    color: var(grey);
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    font-weight: 700;
+    font-family: "Monument Regular PP";
+}
+
+header .logo{
+    font-size: 20px;
+    color: var(--secondary);
+    margin-left: 40px;
+    font-weight: 700;
+    font-family: "Monument Regular PP";
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.li a {
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; 
+    display: inline-block;
+    color: var(--secondary); 
+}
+
+.li a:hover {
+    transform: translateY(-5px);
+    color: rgb(255, 0, 0); 
+}
+
+.li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--secondary); 
+    transition: width 0.3s ease-out;
+}
+
+.li a:hover::after {
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+}
+
+/* ↓↓ ===== [2] CONTENT DETAILS ===== ↓↓ */
+
+/* ↓↓ ===== [2.1] FORM METHOD ===== ↓↓ */
+h1 {
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 80px;
+    font-family:  "PP Monument Extended Black";
+    text-transform: uppercase;
+    line-height: 90%;
+    margin-bottom: 20px; /* Added margin bottom for spacing */
+  
+}
+
+.big {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    transition: 0.4s;
+}
+
+.big:hover {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    padding-right: 20px;
+}
+
+label {
+    color: white; /* Added label color */
+    font-size: 18px;
+    font-family: "Monument Light PP";
+    margin-left: 12%; /* Adjusted left margin for consistency */
+    width: 75%;
+    display: block; /* Ensures each label is on a new line */
+}
+
+.dim {
+    opacity: 0.3;
+}
+
+input,
+textarea {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #747474;
+    font-size: 18px;
+    padding: 16px 16px;
+    color: #666666;
+    margin-bottom: 0.4em;
+    font-family: "Monument Light PP";
+    margin-left: 12%;
+    width: 75%;
+}
+
+textarea {
+    font-family: "Monument Light PP";
+    resize: none;
+}
+
+input:focus-within,
+textarea:focus-within {
+    outline: none;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    padding-left: 30px;
+    transition: 0.4s;
+    font-weight: bolder;
+}
+
+.submit {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    font-family: "Monument Regular";
+    background: none; /* Remove background color */
+    border: none; /* Remove borders */
+    padding: 10px 18px;
+    text-align: left;
+    display: block; /* Ensure the button takes the full width */
+    margin: auto; /* Automatically center the button horizontally */
+    margin-top: 20px; /* Add margin top for spacing */
+    transition: 0.4s;
+}
+
+.submit:hover {
+    padding-left: 5%;
+}
+  
+
+/* ↓↓ ===== [2.2] FOOTER 1 ===== ↓↓ */
+.footer {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+  
+.icon-elem {
+    list-style: none;
+}
+   
+.footerdetails {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+  
+.menu-elem {
+    list-style: none;
+}
+
+.menu-icon {
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 1;
+    transition: 0.3s;
+    font-family: "Monument Regular PP";
+}
+
+.menu-icon:hover {
+    color: #b4b4b4;
+}
+  
+.menu-icon:hover {
+    opacity: 1;
+}
+  
+.text {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: "Monument Regular PP";
+}
+
+
+
+
+
+/* ↓↓ 1280px LAPTOP SETTINGS ↓↓ */
+
+@media only screen and (max-width: 1500px) {
+
+/* ↓↓ GENERAL RULES & WEBSITE SETTINGS ↓↓ */
+
+body {
+    background-color: rgb(0, 0, 0); /* temporary original: white*/
+}
+
+/* ↓↓ ===== [1] CONTENT DETAILS ===== ↓↓ */
+
+/* ↓↓ ===== [1.1] FORM METHOD ===== ↓↓ */
+h1 {
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 50px;
+    font-family:  "PP Monument Extended Black";
+    text-transform: uppercase;
+    line-height: 90%;
+    margin-bottom: 20px; /* Added margin bottom for spacing */
+  
+}
+
+.big {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    transition: 0.4s;
+    font-size: 70px;
+}
+
+.big:hover {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    padding-right: 1px;
+    font-size: 50px;
+}
+
+.big2 {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    transition: 0.4s;
+}
+
+.big2:hover {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    padding-right: 20px;
+}
+
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    h1 {
+        color: white;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 50px;
+        font-family:  "PP Monument Extended Black";
+        text-transform: uppercase;
+        line-height: 90%;
+        margin-bottom: 20px; /* Added margin bottom for spacing */
+      
+    }
+    
+    .big {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        transition: 0.4s;
+        font-size: 50px;
+    }
+    
+    .big:hover {
+        -webkit-text-fill-color: rgb(255, 255, 255);
+        padding-right: 1px;
+        font-size: 50px;
+    }
+    
+    .big2 {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        transition: 0.4s;
+    }
+    
+    .big2:hover {
+        -webkit-text-fill-color: rgb(255, 255, 255);
+        padding-right: 0px;
+    }
+
+/* ↓↓ ===== [2] ANIMATED NAVBAR ===== ↓↓ */
+header{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+}
+
+header.active{
+    top: 0;
+    left: 0;
+    height: 60px; 
+}
+
+header.active .logo,
+header.active ul li a{
+    color: black;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    margin-right:40px ;
+}
+
+header ul li{
+    margin: 0px 14px;
+}
+
+header ul li a{
+    color: var(grey);
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    font-weight: 700;
+    font-family: "Monument Regular PP";
+}
+
+header .logo{
+    font-size: 20px;
+    color: var(--secondary);
+    margin-left: 40px;
+    font-weight: 700;
+    font-family: "Monument Regular PP";
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.li a {
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; 
+    display: inline-block;
+    color: var(--secondary); 
+}
+
+.li a:hover {
+    transform: translateY(0px);
+    color: rgb(255, 0, 0); 
+}
+
+.li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--secondary); 
+    transition: width 0.3s ease-out;
+}
+
+.li a:hover::after {
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+}
+}
+
+/* ↓↓ 1000px SETTINGS (NO DISPLAY) ↓↓ */
+@media only screen and (max-width: 1000px) {
+    /*problem here */
+    * {
+        display: none;
+    }
+
+    /* ↓↓ ===== [0] MESSAGE UNHIDDEN ===== ↓↓ */
+    
+}
