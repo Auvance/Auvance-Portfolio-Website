@@ -6,3 +6,5 @@ Website Link: https://auvance.xyz/ <br>
 Project Start: 2023/10/19 <br>
 Project End: 2024/03/16 <br>
 Last Updated: 2024/09/16
+
+## Note: Website is Unavailable for view < 1000 px
