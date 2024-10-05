@@ -8,5 +8,5 @@ Project End: 2024/03/16 <br>
 Last Updated: 2024/09/16
 
 ## Note: 
-Website is Unavailable for view < 1000 px
+Website is Unavailable for view < 1000 px <br>
 Coming Soon For 1000 - 500 px devices.
